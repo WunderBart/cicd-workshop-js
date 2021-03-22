@@ -31,7 +31,7 @@ jobs:
             curl --location --request POST 'http://f126c4922131.ngrok.io/pipeline/register' \
             --header 'Content-Type: application/json' \
             --data-raw '{
-              "circleci-build-url": "https://circleci.com/gh/zmarkan/cicd-workshop-js/28"
+              "circleci-build-url": "'$CIRCLE_BUILD_URL'"
             }'
       - store_test_results:
           path: ~/test-results
