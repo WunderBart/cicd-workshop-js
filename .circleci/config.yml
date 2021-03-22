@@ -31,7 +31,7 @@ jobs:
             curl --location --request POST 'http://f97075584da5.ngrok.io/pipeline/register' \
             --header 'Content-Type: application/json' \
             --data-raw '{
-              "circleci-build-url": "${CIRCLE_BUILD_URL}"
+              "circleci-build-url": "'$CIRCLE_BUILD_URL'"
             }'
       - store_test_results:
           path: ~/test-results
